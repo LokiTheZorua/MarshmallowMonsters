@@ -28,7 +28,7 @@ public class MarshmallowMonster
 	{
 		String description= "I am barely a moster, my name is " + name + ", I have " + eyeCount + " eyes and only " ;
 		description += tentaAmount + " tenta... ten tacks... ugh, I can never say it. Tentacles, there we go." ;
-		description += " I have " + armCount + " And I have " + hasBloop + " Bloops!";
+		description += " I have " + armCount + " And I have a " + hasBloop + " Bloop!";
 		
 		return description;
 	}
