@@ -15,7 +15,7 @@ public class MarshmallowMonster
 		//initializes everything to 0, false or null.
 	}
 	
-	public MarshmallowMonster(String name, int eyeCount, int armCount, int tentaAmount, boolean hasBloop)
+	public MarshmallowMonster(String name, int eyeCount, int armCount, double tentaAmount, boolean hasBloop)
 	{
 		this.name = name;
 		this.eyeCount = eyeCount;
@@ -26,9 +26,9 @@ public class MarshmallowMonster
 	
 	public String toString()
 	{
-		String description= "I am barely a moster, my name is " + name + ", I have" + eyeCount + "eyes and only" ;
-		description += tentaAmount + "tenta... ten tacks... ugh, I can never say it. Tentacles, there we go." ;
-		description += "I have" + armCount + "And I have" + hasBloop + "Bloops!";
+		String description= "I am barely a moster, my name is " + name + ", I have " + eyeCount + " eyes and only " ;
+		description += tentaAmount + " tenta... ten tacks... ugh, I can never say it. Tentacles, there we go." ;
+		description += " I have " + armCount + " And I have " + hasBloop + " Bloops!";
 		
 		return description;
 	}
