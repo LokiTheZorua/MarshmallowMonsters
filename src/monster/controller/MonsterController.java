@@ -69,6 +69,6 @@ public class MonsterController
 			System.out.println("Thank you! I now have " + currentMonster.getTentaAmount() + " Tenticles");
 		}
 		
-		myScanner.close();
+		myScanner.close(); // Closing prevents memory leaks
 	}
 }
