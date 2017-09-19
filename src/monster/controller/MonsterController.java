@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class MonsterController
 {
-	public static void start()
+	public void start()
 	{
 		MarshmallowMonster basic = new MarshmallowMonster();
 		System.out.println(basic);
@@ -14,6 +14,7 @@ public class MonsterController
 		System.out.println ("I am feeling hungry, I am going to eat one of his arms.");
 		John.setArmCount(John.getArmCount()- 1);
 		System.out.println(John);
+		interactWithMonster(John);
 		
 	}
 	
