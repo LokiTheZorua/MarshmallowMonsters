@@ -47,7 +47,26 @@ public class MonsterController
 		else
 		{
 			currentMonster.setArmCount(currentMonster.getArmCount() - armEat);
-			System.out.println("Ok, I now have " + currentMonster.getArmCount() + "arms" ); 
+			System.out.println("Ok, I now have " + currentMonster.getArmCount() + " arms" ); 
+		}
+		
+		System.out.println( "How many tenticles do you want to give me?");
+		//consumed = myScanner.nextInt();
+		int tentaGive = myScanner.nextInt();
+		
+		if(tentaGive == 0)
+		{
+			System.out.println("Ok, that's fine");
+		}
+		
+		else if (tentaGive < 0)
+		{
+			System.out.println("Sorry but I won't let you take any of my tenticles.");
+		}
+		else
+		{
+			currentMonster.setTentaAmout(currentMonster.getTentaAmount() + tentaGive);
+			System.out.println("Thank you! I now have " + currentMonster.getTentaAmount() + " Tenticles");
 		}
 		
 		myScanner.close();
