@@ -66,6 +66,7 @@ public class MarshmallowMonster
 	}
 	public String toString()
 	{
+		// makes the base for the lines that the monster would say.
 		String description= "I am barely a moster, my name is " + name + ", I have " + eyeCount + " eyes and only " ;
 		description += tentaAmount + " tenta... ten tacks... ugh, I can never say it. Tentacles, there we go." ;
 		description += " I have " + armCount + " And I have a " + hasBloop + " Bloop!";
