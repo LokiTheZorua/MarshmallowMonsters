@@ -15,22 +15,34 @@ public class MonsterController
 	public void start()
 	{
 		MarshmallowMonster basic = new MarshmallowMonster();
-		System.out.println(basic);
+//		System.out.println(basic);
 		popup.displayText(basic.toString());
 		MarshmallowMonster John = new MarshmallowMonster("John", 2, 5, 3, true);
-		System.out.println (John);
-		System.out.println ("I am feeling hungry, I am going to eat one of his arms.");
+//		System.out.println (John);
+		popup.displayText(John.toString());
+//		System.out.println ("I am feeling hungry, I am going to eat one of his arms.");
+		popup.displayText("I am feeling hungry, I am going to eat one of his arms");
 		John.setArmCount(John.getArmCount()- 1);
-		System.out.println(John);
+//		System.out.println(John);
+		popup.displayText(John.toString());
 		interactWithMonster(John);
 		
 	}
 	
 	private void interactWithMonster(MarshmallowMonster currentMonster)
 	{
+		
 		Scanner myScanner = new Scanner(System.in);
-		System.out.println(currentMonster.getname() + " wants to know how many eyes you want to eat, please type in how many.");
-		int consumed = myScanner.nextInt();
+//		System.out.println(currentMonster.getname() + " wants to know how many eyes you want to eat, please type in how many.");
+		int consumed = 0;
+		String response = popup.getResponse(currentMonster.getname() + " wants to know how many eyes you want to eat, please type in how many.");
+		
+		if(isValidInteger(response))
+		{
+			consumed = Integer.parseInt(response);
+		}
+		
+//		int consumed = myScanner.nextInt();
 		currentMonster.setEyeCount(currentMonster.getEyeCount()- consumed);
 		System.out.println(currentMonster);
 		
@@ -79,9 +91,28 @@ public class MonsterController
 		
 		popup.displayText("Hi there, ready to play?");
 		String answer = popup.getResponse("What is the air speed of a coconut laden swallow");
-		System.out.println(answer);
+		System.out.println(response);
 		
+
 		
 		myScanner.close(); // Closing prevents memory leaks
 	}
+
+	private boolean isValidInteger(String sample)
+	{
+		boolean valid = false;
+		
+		try
+		{
+			Integer.parseInt(sample);
+			valid = true;
+		}
+		catch(NumberFormatException error)
+		{
+			popup.displayText("You need to imput an int, " + sample + "is not valid");
+		}
+		return valid;
+	}
 }
+
+
