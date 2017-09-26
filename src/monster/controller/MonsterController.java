@@ -14,10 +14,16 @@ public class MonsterController
 	}
 	public void start()
 	{
-		int count = 0;
-		while(count < 10)
+//		int count = 0;
+//		while(count < 10)
+//		{
+//			count =+ 2;
+//			popup.displayText("Am I not the coolst?");
+//		}
+		
+		for(int loop = 0; loop < 10; loop += 1)
 		{
-			popup.displayText("Am I not the coolst?");
+			popup.displayText("This is loop #" + (loop+ 1) + "of ten");
 		}
 		
 		
