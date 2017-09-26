@@ -14,6 +14,14 @@ public class MonsterController
 	}
 	public void start()
 	{
+		int count = 0;
+		while(count < 10)
+		{
+			popup.displayText("Am I not the coolst?");
+		}
+		
+		
+		
 		// starts the original pop ups
 		MarshmallowMonster basic = new MarshmallowMonster();
 //		System.out.println(basic);
