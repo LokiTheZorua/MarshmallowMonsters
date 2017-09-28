@@ -1,16 +1,19 @@
 package monster.controller;
 // Imports stuff from other flies
 import monster.model.MarshmallowMonster;
+import java.util.ArrayList;
 import java.util.Scanner;
 import monster.veiw.MonsterDisplay;
-
+import java.util.List;
 public class MonsterController
 {
 	private MonsterDisplay popup;
+	private List<MarshmallowMonster> monsterList;
 	
 	public MonsterController()
 	{
 		popup = new MonsterDisplay();
+		monsterList = new ArrayList<MarshmallowMonster>();
 	}
 	public void start()
 	{
@@ -40,6 +43,11 @@ public class MonsterController
 		John.setArmCount(John.getArmCount()- 1);
 //		System.out.println(John);
 		popup.displayText(John.toString());
+		
+		monsterList.add(basic);
+		monsterList.add(John);
+		
+		
 		interactWithMonster(John);
 		
 	}
